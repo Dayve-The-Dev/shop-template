@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow Fit - Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/fc11ab7748.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="Logo"><span style="margin-left:10px;">Glow Fit</span></div>
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search all products..." />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+  <section class="category">
+    <h1>Search All Products</h1>
+    <div class="product-grid">
+      <div class="product"><img src="images/clothes1.jpg"><h3>Classic T-Shirt</h3><p>$15</p><button onclick="orderProduct('Classic T-Shirt', 15)">Add to Cart</button></div>
+      <div class="product"><img src="images/clothes2.jpg"><h3>Summer Dress</h3><p>$25</p><button onclick="orderProduct('Summer Dress', 25)">Add to Cart</button></div>
+      <div class="product"><img src="images/shoes1.jpg"><h3>Running Shoes</h3><p>$45</p><button onclick="orderProduct('Running Shoes', 45)">Add to Cart</button></div>
+      <div class="product"><img src="images/accessory1.jpg"><h3>Gold Earrings</h3><p>$20</p><button onclick="orderProduct('Gold Earrings', 20)">Add to Cart</button></div>
+      <div class="product"><img src="images/wig1.jpg"><h3>Curly Wig</h3><p>$50</p><button onclick="orderProduct('Curly Wig', 50)">Add to Cart</button></div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Glow Fit. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/2340000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

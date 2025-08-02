@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart - Glow Fit</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="cart-header">
+  <div class="top-bar">
+    <div class="logo">
+      <img src="images/logo.png" style="height: 40px; vertical-align: middle;" />
+      <span style="margin-left: 10px;">Glow Fit</span>
+    </div>
+    <nav class="navigation">
+      <a href="index.html">Home</a>
+      <a href="pages/clothes.html">Clothes</a>
+      <a href="pages/shoes.html">Shoes</a>
+      <a href="pages/accessories.html">Accessories</a>
+      <a href="pages/wigs.html">Wigs</a>
+      <a href="cart.html" class="cart-icon active" aria-label="View Cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" class="cart-badge">0</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="cart-container">
+  <h1>Your Cart</h1>
+  <div id="cart-items" class="cart-items">
+    <!-- Cart items rendered by JS -->
+  </div>
+
+  <div class="cart-summary">
+    <h2 id="cart-total">Total: $0</h2>
+    <div class="cart-buttons">
+      <a id="checkout" class="btn" href="#" aria-label="Proceed to checkout">Checkout</a>
+    </div>
+  </div>
+</main>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+</body>
+</html>

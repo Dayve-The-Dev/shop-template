@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Fit - Clothing Shop</title>
+  <meta name="description" content="Glow Fit offers trendy clothes, shoes, accessories, and wigs tailored for your unique style." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/fc11ab7748.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/logo.png" style="height: 40px; vertical-align: middle;" />
+        <span style="margin-left: 50px;">Glow Fit</span>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search products..." aria-label="Search products" autocomplete="off" />
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+      <nav class="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/clothes.html">Clothes</a>
+        <a href="pages/shoes.html">Shoes</a>
+        <a href="pages/accessories.html">Accessories</a>
+        <a href="pages/wigs.html">Wigs</a>
+        <a href="cart.html" class="cart-icon" aria-label="View Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Style That Shines</h1>
+      <p>Clothes, Shoes, Accessories & Wigs — Curated Just for You</p>
+      <a href="pages/clothes.html" class="btn">Shop Now</a>
+    </section>
+
+    <div id="toast" class="toast"></div>
+
+    <section class="categories">
+      <h2>Shop by Category</h2>
+      <div class="grid">
+        <a href="pages/clothes.html" class="card" aria-label="Shop Clothes">Clothes</a>
+        <a href="pages/shoes.html" class="card" aria-label="Shop Shoes">Shoes</a>
+        <a href="pages/accessories.html" class="card" aria-label="Shop Accessories">Accessories</a>
+        <a href="pages/wigs.html" class="card" aria-label="Shop Wigs">Wigs</a>
+      </div>
+    </section>
+
+    <section class="featured">
+      <h2 class="header2">Featured Picks</h2>
+      <div class="product-grid">
+        <div class="product" data-id="Denim Jacket">
+          <a href="pages/clothes.html">
+            <img src="images/Denim jacket.webp" alt="Denim Jacket" />
+          </a>
+          <h3>Denim Jacket</h3>
+          <p>$35</p>
+          <button class="btn" onclick="orderProduct('Denim Jacket')">Order</button>
+        </div>
+        <div class="product" data-id="Sneakers">
+          <a href="pages/shoes.html">
+            <img src="images/Sneakers.webp" alt="Sneakers" />
+          </a>
+          <h3>Glow Sneakers</h3>
+          <p>$45</p>
+          <button class="btn" onclick="orderProduct('Sneakers')">Order</button>
+        </div>
+        <div class="product" data-id="earrings001">
+          <a href="pages/accessories.html">
+            <img src="images/crystal earrings.webp" alt="Crystal Earrings" />
+          </a>
+          <h3>Crystal Earrings</h3>
+          <p>$10</p>
+          <button class="btn" onclick="orderProduct('Crystal Earrings')">Order</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Glow Fit. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com/yourshop" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://tiktok.com/@yourshop" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://wa.me/2340000000000" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:your@email.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="tel:+2340000000000" aria-label="Phone">
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

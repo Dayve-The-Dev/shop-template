@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Fit - Wigs</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://kit.fontawesome.com/fc11ab7748.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="../images/logo.png" style="height: 40px; vertical-align: middle;" />
+        <span style="margin-left: 50px;">Glow Fit</span>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search wigs..." aria-label="Search wigs" autocomplete="off" />
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+      <nav class="navigation">
+        <a href="../index.html">Home</a>
+        <a href="clothes.html">Clothes</a>
+        <a href="shoes.html">Shoes</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="wigs.html" class="active">Wigs</a>
+        <a href="../cart.html" class="cart-icon" aria-label="View Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="category">
+      <h1 class="header1">Wigs</h1>
+      <div class="product-grid">
+        <div class="product">
+          <a href="product.html?id=curly-wig">
+            <img src="../images/curly wig.jfif" alt="Curly Wig" />
+          </a>
+          <h3>Curly Wig</h3>
+          <p>$30</p>
+          <button onclick="orderProduct('Curly Wig')" class="btn" aria-label="Add Curly Wig to cart">
+            Add to Cart
+          </button>
+        </div>
+        <!-- Add more wig items below using same structure -->
+          <div class="product">
+          <a href="product.html?id=straight-wig">
+            <img src="../images/straight wig.jfif" alt="Straight Wig" />
+          </a>
+          <h3>Straight wig</h3>
+          <p>$25</p>
+          <button onclick="orderProduct('Straight Wig')" class="btn" aria-label="Add Straight Wig to cart">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>© 2025 Glow Fit. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com/yourshop" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@yourshop" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/2340000000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

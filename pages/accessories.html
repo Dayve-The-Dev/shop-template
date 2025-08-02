@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Fit - Accessories</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://kit.fontawesome.com/fc11ab7748.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="../images/logo.png" style="height: 40px; vertical-align: middle;" />
+        <span style="margin-left: 10px;">Glow Fit</span>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search accessories..." aria-label="Search accessories" autocomplete="off" />
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+      <nav class="navigation">
+        <a href="../index.html">Home</a>
+        <a href="clothes.html">Clothes</a>
+        <a href="shoes.html">Shoes</a>
+        <a href="accessories.html" class="active">Accessories</a>
+        <a href="wigs.html">Wigs</a>
+        <a href="../cart.html" class="cart-icon" aria-label="View Cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="category">
+      <h1 class="header1">Accessories</h1>
+      <div class="product-grid">
+        <div class="product">
+          <a href="product.html?id=crystal-earrings">
+            <img src="../images/crystal earrings.webp" alt="Crystal Earrings" />
+          </a>
+          <h3>Crystal Earrings</h3>
+          <p>$10</p>
+          <button onclick="orderProduct('Crystal Earrings')" class="btn" aria-label="Add Crystal Earrings to cart">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product">
+          <a href="product.html?id=sun-hat">
+            <img src="../images/sun hat.webp" alt="Sun Hat" />
+          </a>
+          <h3>Sun Hat</h3>
+          <p>$20</p>
+          <button onclick="orderProduct('Sun Hat')" class="btn" aria-label="Add Sun Hat to cart">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>© 2025 Glow Fit. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com/yourshop" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@yourshop" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/2340000000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
