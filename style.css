@@ -171,7 +171,7 @@ nav a.active {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* === Buttons === */
+/* === Buttons and Cards === */
 .btn, .card {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -187,7 +187,6 @@ nav a.active {
   background-color: #e55c51;
   transform: scale(1.05);
 }
-
 .btn.danger, .card.danger {
   background-color: #e74c3c;
 }
@@ -326,39 +325,97 @@ footer p {
   pointer-events: auto;
 }
 
-/* === Responsive === */
+/* === Responsive Styles === */
 @media (max-width: 768px) {
-  nav {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .logo {
     justify-content: center;
   }
 
-  .product {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cart-item-actions {
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 0.5rem;
+  nav {
+    justify-content: center;
+    gap: 10px;
   }
 
   .hero h1 {
     font-size: 2rem;
   }
 
-  header {
-    justify-content: center;
-    gap: 1rem;
+  .hero p {
+    font-size: 1rem;
   }
 
-  .logo {
-    justify-content: center;
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .cart-item-actions {
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+  }
+
+  .cart-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cart-summary {
+    text-align: left;
+  }
+
+  .suggestions-list {
+    max-height: 150px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .btn, .card {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  .product {
+    padding: 0.8rem;
+  }
+
+  .cart-item-details h3 {
+    font-size: 1rem;
+  }
+
+  .cart-item-details p {
+    font-size: 0.9rem;
   }
 }
