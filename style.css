@@ -376,7 +376,7 @@ footer p {
   }
 
   nav {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     gap: 8px;
   }
