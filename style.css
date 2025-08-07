@@ -1,10 +1,17 @@
-/* === Base Styles === */
-body {
+/* === Base Reset & Defaults === */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
   background: #fdfbff;
   color: #222;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -12,8 +19,20 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
 h1 {
-  margin: 30px;
+  font-size: 2.5rem;
+}
+p {
+  line-height: 1.6;
 }
 
 /* === Header === */
@@ -35,14 +54,6 @@ header {
   to { transform: translateY(0); opacity: 1; }
 }
 
-.top-bar {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -50,49 +61,9 @@ header {
   font-size: 1.5rem;
   color: #ff6f61;
 }
-
 .logo img {
   height: 40px;
-}
-
-/* === Categories === */
-.categories {
-  margin-left: 350px;
-}
-
-/* === Featured === */
-.header1 {
-  margin-left: 620px;
-}
-
-.header2 {
-  margin-left: 620px;
-  margin-top: 50px;
-}
-
-/* === Cards === */
-.card {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #ff6f61;
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.card:hover {
-  background-color: #e55c51;
-  transform: scale(1.05);
-}
-
-.card.danger {
-  background-color: #e74c3c;
-}
-.card.danger:hover {
-  background-color: #c0392b;
+  margin-right: 10px;
 }
 
 /* === Navigation === */
@@ -100,7 +71,9 @@ nav {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
+
 nav a {
   font-weight: 500;
   color: #444;
@@ -108,7 +81,6 @@ nav a {
   border-radius: 6px;
   transition: 0.2s ease;
 }
-
 nav a.active {
   color: #ff6f61;
   background-color: #ffecea;
@@ -119,11 +91,10 @@ nav a.active {
   position: relative;
 }
 .search-container input {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #ccc;
-  border-radius: 80px;
+  border-radius: 50px;
   font-size: 1rem;
-  width: 70%
 }
 .search-container input:focus {
   outline: none;
@@ -151,7 +122,6 @@ nav a.active {
   padding: 10px 15px;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 .suggestions-list li:hover {
   background: #ffe8e4;
@@ -181,7 +151,7 @@ nav a.active {
   100% { transform: scale(1); }
 }
 
-/* === Hero / Featured Section === */
+/* === Hero Section === */
 .hero {
   padding: 4rem 2rem;
   background: linear-gradient(to right, #dfeeff, #fff);
@@ -189,7 +159,6 @@ nav a.active {
   animation: fadeIn 0.8s ease;
 }
 .hero h1 {
-  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .hero p {
@@ -203,26 +172,26 @@ nav a.active {
 }
 
 /* === Buttons === */
-.btn {
+.btn, .card {
   display: inline-block;
   padding: 0.6rem 1.2rem;
   background-color: #ff6f61;
   color: white;
   border-radius: 25px;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: 0.3s ease;
   cursor: pointer;
   border: none;
 }
-.btn:hover {
+.btn:hover, .card:hover {
   background-color: #e55c51;
   transform: scale(1.05);
 }
 
-.btn.danger {
+.btn.danger, .card.danger {
   background-color: #e74c3c;
 }
-.btn.danger:hover {
+.btn.danger:hover, .card.danger:hover {
   background-color: #c0392b;
 }
 
@@ -232,6 +201,7 @@ nav a.active {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  padding: 2rem;
 }
 .product {
   border: 1px solid #eee;
@@ -240,14 +210,13 @@ nav a.active {
   width: 180px;
   text-align: center;
   background: #f3d9e8;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 .product:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 .product img {
-  width: 100%;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
@@ -261,7 +230,6 @@ nav a.active {
   max-width: 900px;
   margin: auto;
 }
-
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -275,23 +243,16 @@ nav a.active {
 .cart-item:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-
 .cart-item-details h3 {
-  margin: 0 0 5px;
+  margin-bottom: 5px;
 }
 .cart-item-details p {
-  margin: 0;
   font-size: 0.95rem;
   color: #666;
 }
-.cart-item .quantity {
-  font-weight: bold;
-}
-
 .cart-item-actions {
   display: flex;
   gap: 0.5rem;
-  align-items: center;
 }
 .remove-btn {
   background: #e74c3c;
@@ -305,23 +266,21 @@ nav a.active {
 .remove-btn:hover {
   background: #c0392b;
 }
-
 .cart-summary {
   text-align: right;
   margin-top: 2rem;
 }
 #cart-total {
   font-size: 1.4rem;
-  margin-bottom: 1rem;
 }
 
-/* === Cart Buttons Wrapper === */
+/* === Cart Buttons === */
 .cart-buttons {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
-  margin-top: 1rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 /* === Footer === */
@@ -331,7 +290,7 @@ footer {
   text-align: center;
 }
 footer p {
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
   color: #777;
 }
@@ -339,7 +298,7 @@ footer p {
   margin: 0 8px;
   font-size: 20px;
   color: #888;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: 0.3s ease;
 }
 .socials a:hover {
   color: #ff6f61;
@@ -369,30 +328,13 @@ footer p {
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
   nav {
-    flex-direction: row;
-    width: 100%;
-    gap: 8px;
-  }
-
-  .search-container {
-    width: 100%;
+    justify-content: center;
   }
 
   .product {
     width: 100%;
     max-width: 300px;
-  }
-
-  .cart-buttons {
-    flex-direction: column;
-    align-items: stretch;
   }
 
   .cart-item {
@@ -401,6 +343,22 @@ footer p {
   }
 
   .cart-item-actions {
+    justify-content: space-between;
+    width: 100%;
     margin-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  header {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
   }
 }
