@@ -123,6 +123,7 @@ nav a.active {
   border: 1px solid #ccc;
   border-radius: 80px;
   font-size: 1rem;
+  width: 30%
 }
 .search-container input:focus {
   outline: none;
